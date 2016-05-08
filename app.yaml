@@ -1,0 +1,16 @@
+application: neon-infinity-814
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+# Endpoints handler
+- url: /_ah/spi/.*
+  script: main.APPLICATION
+
+libraries:
+- name: pycrypto
+  version: latest
+- name: endpoints
+  version: 1.0
